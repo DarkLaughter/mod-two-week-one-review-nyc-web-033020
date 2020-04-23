@@ -20,7 +20,14 @@ class SeasController < ApplicationController
     render 'show.html' 
   end
   
-  
+  def edit
+    @sea = Sea.find(params[:id])
+    # render 'edit.html'
+  end
+
+  def update
+    
+  end
   
   
   
