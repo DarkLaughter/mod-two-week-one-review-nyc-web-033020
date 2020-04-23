@@ -12,21 +12,21 @@ class SeasController < ApplicationController
 
   def show
     @sea = Sea.find(params[:id])
-    #render :show 
   end
   
   def create
     @sea = Sea.create(sea_params)
-    render 'show.html' 
+    render 'show' 
   end
   
   def edit
     @sea = Sea.find(params[:id])
-    # render 'edit.html'
   end
 
   def update
-    
+    @sea = Sea.find(params[:id])
+    @sea.update(sea_params)
+    render 'show'
   end
   
   
